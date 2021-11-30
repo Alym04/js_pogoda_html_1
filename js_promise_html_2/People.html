@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+         .block{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .item{
+            width: 300px;
+            padding: 8px;
+            margin: 15px;
+            background-color: rgb(218, 195, 195);
+        }
+        .container a{
+            color: red;
+            font-size: 40px;
+            cursor: pointer;
+            margin-left: 13%;
+        }
+        .container a:hover{
+            color: skyblue;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html">People</a>
+        <div class="block"></div>
+    </div>
+    <script>
+        const block = document.getElementsByClassName('block')[0]
+        const f1 = async () => {
+            const res = await fetch('https://swapi.dev/api/people')
+            return res.json()
+        }
+        f1().then((data) => {
+            console.log(data.results);
+            data.results.map((data) =>{
+            block.innerHTML += `<div class='item'>
+                <p>Name: ${data.name}</p>
+                <p>Height: ${data.height}</p>
+                <p>Mass: ${data.mass}</p>
+                <p>Hair: ${data.hair_color}</p>
+                <p>Skin: ${data.skin_color}</p>
+                </div>`
+            })
+        })
+    </script>
+</body>
+</html>

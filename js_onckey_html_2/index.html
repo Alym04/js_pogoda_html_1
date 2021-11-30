@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* h1 {
+            display: none;
+        } */
+    </style>
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- <input type="text" name="" id="">
+    <h1></h1> -->
+    <!-- <button>click</button>
+    <h1>Hello</h1>
+      -->
+    <button>text</button>
+    <input type="password" name="" id="">
+    <script>
+        // let a = document.getElementsByTagName('input')[0]
+        // let h1 = document.getElementsByTagName('h1')[0]
+        // let body = document.body
+        // a.onkeydown = (e) => {
+        //     if (e.keyCode === 13)
+        //         h1.innerText = e.target.value
+        // }
+        // let btn = document.getElementsByTagName('button')[0]
+        // let h1 = document.getElementsByTagName('h1')[0]
+        // let show =true
+        // btn.onclick = () => {
+        //     h1.style.display = show ? 'none' : 'block';
+        //     show = !show
+        // }
+        let btn = document.getElementsByTagName('button')[0]
+        let inp = document.getElementsByTagName('input')[0]
+        let show = true
+        btn.onclick = () => {
+                btn.innerText = show ? 'text' : 'password';
+                inp.type = show ?'password' : 'text';
+                show = !show
+        }
+    </script>
+</body>
+
+</html>

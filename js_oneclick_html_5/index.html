@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .container,
+        h1 {
+            display: none;
+        }
+        .Technology img {
+            display: none;
+        }
+        .Nature img {
+            display: none;
+        }
+        .Animals,
+        .Technology,
+        .Nature {
+            display: flex;
+            /* justify-content: center; */
+            background-size: cover;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button>ANIMALS</button>
+    <button>TECHNOLOGY</button>
+    <button>NATURE</button>
+    <h1 id="h1">The Animals</h1>
+    <h1 id="h2"></h1>
+    <h1 id="h3"></h1>
+    <div class="container">
+        <div class="Animals">
+            <img class='box' id="box" src="https://cdn.mos.cms.futurecdn.net/jACFdMxaismCLAARwDsndh-970-80.jpg.webp"
+                alt="">
+            <img class='box 1' id="box1"
+                src="https://aldf.org/wp-content/uploads/fly-images/55604/GettyImages-141467674-crop-1204x516-c.jpg"
+                alt="">
+            <img class='box 2' id="box2"
+                src="https://www.remotelands.com/travelogues/app/uploads/2017/07/pbmt-1536x768.jpg" alt="">
+        </div>
+        <div class="Technology">
+            <img class='box' id="block"
+                src="https://thetechtheories.com/wp-content/uploads/2020/01/What-is-the-future-of-Technology.jpg"
+                alt="">
+            <img class='box 1' id="block1"
+                src="https://cdn.mos.cms.futurecdn.net/8bEfxy8skS6fUVZnfaLWxj-970-80.jpg.webp" alt="">
+            <img class='box 2' id="block2"
+                src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201810/stockvault-person-studying-and-learning---knowledge-concept178241_0.jpeg?yCXmhi7e2ARwUtzHHlvtcrgETnDgFwCK&size=770:433"
+                alt="">
+        </div>
+        <div class="Nature">
+            <img class='box' id="black" src="https://ktonanovenkogo.ru/image/priroda-gora.jpg" alt="">
+            <img class='box 1' id="black1"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Desert_Electric.jpg/274px-Desert_Electric.jpg"
+                alt="">
+            <img class='box 2' id="black2" src="https://klike.net/uploads/posts/2019-01/1547365376_1.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        let a = document.getElementById('box')
+        let b = document.getElementById("box1")
+        let c = document.getElementById("box2")
+        let d = document.getElementById('block')
+        let e = document.getElementById('block1')
+        let f = document.getElementById('block2')
+        let g = document.getElementById('black')
+        let h = document.getElementById('black1')
+        let i = document.getElementById('black2')
+        let h1 = document.getElementById('h1')
+        let h2 = document.getElementById('h2')
+        let h3 = document.getElementById('h3')
+        let btn = document.getElementsByTagName('button')[0]
+        let btn1 = document.getElementsByTagName('button')[1]
+        let btn2 = document.getElementsByTagName('button')[2]
+        btn.onclick = () => {
+            let container = document.getElementsByTagName('div')[0].style.display = 'block'
+            h1.innerText = 'The Animals'
+            h1.style.display = 'block'
+            a.style.display = 'block'
+            b.style.display = 'block'
+            c.style.display = 'block'
+            d.style.display = 'none'
+            e.style.display = 'none'
+            f.style.display = 'none'
+            g.style.display = 'none'
+            h.style.display = 'none'
+            i.style.display = 'none'
+        }
+        btn1.onclick = () => {
+            h1.innerText = 'The technology'
+            h1.style.display = 'block'
+            let container = document.getElementsByTagName('div')[0].style.display = 'block'
+
+            a.style.display = 'none'
+            b.style.display = 'none'
+            c.style.display = 'none'
+            d.style.display = 'block'
+            e.style.display = 'block'
+            f.style.display = 'block'
+            g.style.display = 'none'
+            h.style.display = 'none'
+            i.style.display = 'none'
+        }
+        btn2.onclick = () => {
+            h1.innerText = 'The Nature'
+            h1.style.display = 'block'
+            let container = document.getElementsByTagName('div')[0].style.display = 'block'
+            a.style.display = 'none'
+            b.style.display = 'none'
+            c.style.display = 'none'
+            d.style.display = 'none'
+            e.style.display = 'none'
+            f.style.display = 'none'
+            g.style.display = 'block'
+            h.style.display = 'block'
+            i.style.display = 'block'
+        }
+    </script>
+</body>
+
+</html>

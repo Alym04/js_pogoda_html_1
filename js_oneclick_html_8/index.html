@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            background-color: skyblue;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: skyblue;
+        }
+
+        input {
+            width: 200px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        button {
+            width: 225px;
+            padding: 5px;
+            margin: 10px 0;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+
+        .container img {
+            width: 200px;
+            height: 150px;
+            display: none;
+        }
+        a {
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>НАПИШИТЕ ТЕЛЕФОН НОМЕР</h1>
+            <input type="text" placeholder="Номер телефона" name="" id="">
+        <a id="a" href="#">Заполните строку</a>
+        <button>ОТПРАВИТЬ</button>
+        <img src="https://st-0.akipress.org/st_gallery/4/1040604.8ec1f3184bcffc66ef8f0e99e5608cc5.jpg" alt="">
+        <img src="https://vernycapital.com/files/000/000/070/hDrNVFjl.png" alt="">
+        <img src="https://knews.kg/wp-content/uploads/2016/02/oshka-300x225.jpg" alt="">
+    </div>
+    <script>
+        const inp = document.getElementsByTagName('input')[0]
+        const btn = document.getElementsByTagName('button')[0]
+        const img = document.getElementsByTagName('img')[0]
+        const img1 = document.getElementsByTagName('img')[1]
+        const img2 = document.getElementsByTagName('img')[2]
+        const a = document.getElementById('a')
+        const cods = [
+            { operator: 'Megacom', code: '550' },
+            { operator: 'Megacom', code: '551' },
+            { operator: 'Megacom', code: '552' },
+            { operator: 'Megacom', code: '553' },
+            { operator: 'Megacom', code: '554' },
+            { operator: 'Megacom', code: '555' },
+            { operator: 'Megacom', code: '556' },
+            { operator: 'Megacom', code: '557' },
+            { operator: 'Megacom', code: '558' },
+            { operator: 'Megacom', code: '559' },
+            { operator: 'beeline', code: '770' },
+            { operator: 'beeline', code: '771' },
+            { operator: 'beeline', code: '772' },
+            { operator: 'beeline', code: '773' },
+            { operator: 'beeline', code: '774' },
+            { operator: 'beeline', code: '775' },
+            { operator: 'beeline', code: '776' },
+            { operator: 'beeline', code: '777' },
+            { operator: 'beeline', code: '778' },
+            { operator: 'beeline', code: '779' },
+            { operator: 'O!', code: '700' },
+            { operator: 'O!', code: '701' },
+            { operator: 'O!', code: '702' },
+            { operator: 'O!', code: '703' },
+            { operator: 'O!', code: '704' },
+            { operator: 'O!', code: '705' },
+            { operator: 'O!', code: '706' },
+            { operator: 'O!', code: '707' },
+            { operator: 'O!', code: '708' },
+            { operator: 'O!', code: '709' },
+        ];
+        let found = null
+        btn.onclick = () => {
+            const input_value = inp.value
+            if ((input_value.length === 10 && input_value[0] === '0') || (input_value.length === 12 && input_value.substr(0, 3) === '996' || input_value.length === 13 && input_value.substr(0,1) === '+')) {
+                const operator = input_value.substr(-9);
+                const phone = operator.substr(0, 3)
+                for (let i = 0; i < cods.length; i++) {
+                    if (phone === cods[i].code) {
+                        found = cods[i]
+                        if (cods[i].operator === 'Megacom') {
+                            img.style.display = 'block'
+                            img1.style.display = 'none'
+                            img2.style.display = 'none'
+                        }if (cods[i].operator === 'beeline') {
+                            img1.style.display = 'block'
+                            img.style.display = 'none'
+                            img2.style.display= 'none'
+                        }if (cods[i].operator === 'O!') {
+                            img2.style.display = 'block'
+                            img.style.display = 'none'
+                            img1.style.display = 'none'
+                        }
+                    }
+                }
+                if (found) {
+                    console.log(found.operator);
+                }
+            }else{
+                inp.style.boxShadow = '0px 0px 15px 0px red'
+                a.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+</html>

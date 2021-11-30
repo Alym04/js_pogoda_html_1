@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: wheat;
+    }
+    .block h1{
+        font-size: 50px;
+    }
+    .container ,.block{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .container h1{
+        color: white;
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5%;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <!-- <ul></ul> -->
+    <div class="block"><h1>Time</h1></div>
+<div class="container">
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+</div>
+    <script>
+        // let a = ['hello', 'Privet','Hi','Salam']
+        // let ul = document.getElementsByTagName('ul')[0]
+        // a.reverse().map((value, index) => {
+        //     ul.innerHTML += `<li>${value}</li>`
+        // })
+        setInterval(() => {
+            const data = new Date()
+            const hour = data.getHours()
+            const min = data.getMinutes();
+            const sec = data.getSeconds();
+            document.getElementsByTagName('h1')[1].innerText = `${hour}`  
+            document.getElementsByTagName('h1')[1].style.backgroundColor = 'red'
+            document.getElementsByTagName('h1')[1].style.width = '300px'
+            document.getElementsByTagName('h1')[1].style.height = '300px'
+            document.getElementsByTagName('h1')[2].innerText = `${min < 10 ? `0${min}`:min}`
+            document.getElementsByTagName('h1')[2].style.backgroundColor = 'skyblue'
+            document.getElementsByTagName('h1')[2].style.width = '300px'
+            document.getElementsByTagName('h1')[2].style.height = '300px'
+            document.getElementsByTagName('h1')[3].innerText = `${ sec < 10 ? `0${sec}` : sec }`
+            document.getElementsByTagName('h1')[3].style.backgroundColor = 'greenyellow'
+            document.getElementsByTagName('h1')[3].style.width = '300px'
+            document.getElementsByTagName('h1')[3].style.height = '300px'
+        },)
+    </script>
+</body>
+
+</html>

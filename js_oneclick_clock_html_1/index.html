@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .date,
+        .time,
+        .today,
+        .evening {
+            display: flex;
+        }
+
+        .date h1,
+        .time h1,
+        .today h1,
+        .evening input {
+            margin: 25px 20px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="evening">
+        <input type="checkbox" name="" id="">
+        <p>Включить темную тему</p>
+    </div>
+    <div class="date">
+        <h1>Дата:</h1>
+        <h1>18-10-2021</h1>
+    </div>
+    <div class="time">
+        <h1>Время:</h1>
+        <h1></h1>
+    </div>
+    <div class="today">
+        <h1>Сегодня:</h1>
+        <h1>Четверг</h1>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis minima optio necessitatibus fuga aliquam
+        repellendus deleniti voluptas similique dicta porro, ab odit eius exercitationem provident magni magnam ullam
+        quis dignissimos sed natus! Dicta cupiditate natus adipisci perspiciatis, quaerat odio dolores ipsa nisi earum
+        quia repellat recusandae nesciunt est minima sint aliquid laborum consequatur eveniet enim porro molestiae cum!
+        Provident at ad ea nam rem nobis et nesciunt, reprehenderit ducimus voluptatem, omnis sed aut, ab nisi minus
+        quos inventore minima molestiae quasi ex architecto aliquam maiores recusandae doloremque. Consequuntur
+        inventore odio ullam corrupti rem repellendus quasi pariatur perferendis, quae laudantium doloribus voluptatem
+        dicta asperiores eum atque quam voluptates. Deleniti neque dolore ipsum, distinctio, quaerat ab ullam sapiente
+        culpa inventore consequatur ea ipsa alias? Ipsa, eaque asperiores nesciunt possimus autem, esse quaerat illum
+        neque commodi rem omnis, odio pariatur suscipit. Corrupti tempore dolorem officia delectus iure quibusdam
+        incidunt iusto recusandae, error quidem, corporis cum laudantium quo ad harum voluptatem. Repudiandae doloribus
+        sapiente facere vero. Porro impedit nesciunt qui voluptatum minima officia vitae facilis, accusamus ab!
+        Perspiciatis, temporibus hic et nemo quos, reprehenderit possimus animi perferendis magnam non fuga voluptatem
+        architecto odio ut dolorum pariatur quo cum id sequi rem quasi ullam. Quidem perferendis et, ut ipsa neque
+        veritatis reprehenderit, porro, omnis odio sapiente illum! Hic labore libero ea rem maxime soluta perferendis
+        animi amet quisquam, voluptatibus, saepe laudantium exercitationem eos consectetur dolor explicabo sed aliquid
+        fugit magni recusandae, corporis illo officiis obcaecati. Ducimus, possimus porro? Ipsum quia, assumenda,
+        tenetur aut mollitia repellat pariatur saepe provident temporibus tempora quibusdam sapiente laborum ea atque
+        dolorum numquam fuga amet error, dolorem expedita enim minima iure! Dolore nobis sint adipisci? Numquam quisquam
+        sint corporis, dignissimos sit vero aliquam explicabo facere quibusdam delectus. Tenetur exercitationem
+        recusandae dignissimos inventore tempore nulla quod quam, optio perferendis voluptatibus consectetur deserunt.
+    </p>
+    <script>
+        setInterval(() => {
+            const data = new Date()
+            const hour = data.getHours()
+            const min = data.getMinutes();
+            const sec = data.getSeconds();
+
+            document.getElementsByTagName('h1')[3].innerText = `${hour}-${min < 10 ? `0${min}` : min}-${sec < 10 ? `0${sec}` : sec}`
+        })
+        const inp = document.getElementsByTagName('input')[0]
+        const body = document.body
+        const bcolor = ['black', 'white']
+        const color = ['white', 'black']
+        let i = 0
+        inp.onclick = () => {
+            body.style.backgroundColor = bcolor[i]
+            body.style.color = color[i]
+            if (i === 1) {
+                i = 0
+            } else {
+                i++
+            }
+        }
+    </script>
+</body>
+
+</html>

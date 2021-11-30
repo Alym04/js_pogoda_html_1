@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="form">
+        <input type="text" placeholder="name" name="name" id="">
+        <input type="text" placeholder="fname" name="fname" id="">
+        <input type="submit" name="" id="">
+    </form>
+    <script>
+        const onSubmit = document.getElementById('form');
+        const base_url = 'https://jsonplaceholder.typicode.com/posts'
+        const sendData = async (data) => {
+            const res = await fetch(`https://jsonplaceholder.typicode.com/posts`, {
+                method: 'POST',
+                body: data,
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                }
+            })
+            return await res.json()
+            }
+            const f1 = () =>{
+                const data = {
+                    name: 'Asan',
+                    fname: 'Uson'
+                }
+                onSubmit.onsubmit = (e) => {
+                    e.preventDefault();
+                    const formData = new FormData(onSubmit)
+                    sendData(data)
+                }
+            }
+            f1()
+    </script>
+</body>
+
+</html>

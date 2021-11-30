@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgb(80, 112, 80);
+        }
+        .container a{
+            color: red;
+            font-size: 40px;
+            cursor: pointer;
+            margin-left: 78.50%;
+        }
+        .container a:hover{
+            color: skyblue;
+            transition: 1s;
+        }
+        .item{
+            width: 90%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .item p {
+            font-size: 24px;
+            color: rgb(223, 126, 126);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html">Vehicles</a>
+        <div class="block"></div>
+    </div>
+    <script>
+        const block = document.getElementsByClassName('block')[0]
+        const f1 = async () => {
+            const res = await fetch('https://swapi.dev/api/vehicles')
+            return res.json()
+        }
+        f1().then((data) => {
+            console.log(data.results);
+            data.results.map((data) =>{
+            block.innerHTML += `<div class='item'>
+                <p>Name: ${data.name}</p>
+                </div>`
+            })
+        })
+    </script>
+</body>
+</html>

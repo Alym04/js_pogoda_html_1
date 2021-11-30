@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class='text' id='demo2'></h1>
+    <script>
+        let h1 = document.getElementById('demo2')
+        let color = ['red', 'yellow', 'green','pink']
+        let i = 0
+        setInterval(() => {
+            h1.style.color = color[i]
+            h1.innerHTML = i
+            if (i >= 3) {
+                i = -1
+            }
+            i++
+
+        }, 1000);
+    </script>
+</body>
+
+</html>

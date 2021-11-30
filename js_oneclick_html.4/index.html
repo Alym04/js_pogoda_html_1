@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300;0,400;1,300;1,400&family=Red+Hat+Mono:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Mohave:ital,wght@0,300;0,400;1,300;1,400&family=Red+Hat+Mono:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Mohave:ital,wght@0,300;0,400;1,300;1,400&family=Oswald:wght@300&family=Red+Hat+Mono:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        
+        /* .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .block1 {
+            display: flex;
+            justify-content: center;
+        }
+        button{
+            border-radius: 5px;
+        } */
+    </style>
+</head>
+
+<body>
+    <form method="post">
+        Username
+        <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" required=""
+            id="id_username">
+        Password
+        <input type="password" name="password" autocomplete="current-password" required="" id="id_password">
+        <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <!-- <div class="container">
+        <div class="block">
+            <h1></h1>
+        </div>
+        <div class="block1">
+            <button>Mohave, sans-serif</button>
+            <button>red</button>
+        </div>
+    </div> -->
+
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#id_password');
+
+togglePassword.addEventListener('click', function (e) {
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    this.classList.toggle('fa-eye-slash');
+});
+        // let h1 = document.getElementsByTagName('h1')[0]
+        // let btn = document.getElementsByTagName('button')[0]
+        // let btn1 = document.getElementsByTagName('button')[1]
+        // let body = document.body
+        // body.style.backgroundColor = 'red'
+        // let text = ['"Mohave", sans-serif', '"Red Hat Mono", monospace', '"Dongle", sans-serif', '"Oswald", sans-serif']
+        // let color = ["red", "blue", "green", "pink"]
+        // let i = 0
+        // let j = 0
+        // let a = prompt('')
+        // h1.innerText = a
+        // body.style.display = 'block'
+        // btn1.onclick = () => {
+        //     btn1.innerText = color[i]
+        //     body.style.backgroundColor = color[i]
+        //     btn1.style.backgroundColor = color[i]
+        //     if (i === 3) {
+        //         i = 0
+        //     }
+        //     i++
+        // }
+        // btn.onclick = () => {
+        //     btn.innerText = text[j]
+        //     h1.style.fontFamily = text[j]
+        //     btn.style.fontFamily = text[j]
+        //     if (j === 3) {
+        //         j = 0
+        //     }
+        //     j++
+        // }
+    </script>
+</body>
+
+</html>

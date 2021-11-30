@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            width: 200px;
+            margin: 5px 0;
+        }
+
+        .box,
+        .box1,
+        .box2 {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <input type="text" name="" id="">
+        <input type="text" name="" id="">
+    </div>
+    <button>+</button>
+    <button>-</button>
+    <button>*</button>
+    <button>/</button>
+    <div class="box1">
+        <h1>Result:</h1>
+        <h1>0</h1>
+    </div>
+    <hr>
+    <div class="box">
+        <button>-</button>
+        <h3>0</h3>
+        <button>+</button>
+    </div>
+    <div class="box2">
+        <h2>Цена:</h2>
+        <h2>0$</h2>
+    </div>
+    <script>
+        let inp = document.getElementsByTagName('input')[0]
+        let inp1 = document.getElementsByTagName('input')[1]
+        let btn = document.getElementsByTagName('button')[0]
+        let btn1 = document.getElementsByTagName('button')[1]
+        let btn2 = document.getElementsByTagName('button')[2]
+        let btn3 = document.getElementsByTagName('button')[3]
+        let btn4 = document.getElementsByTagName('button')[4]
+        let btn5 = document.getElementsByTagName('button')[5]
+        let h1 = document.getElementsByTagName('h1')[2]
+        let h3 = document.getElementsByTagName('h3')[0]
+        let h2 = document.getElementsByTagName('h2')[1]
+        let i = 0
+        btn.onclick = () => {
+            h1.innerText = (+inp.value) + (+inp1.value)
+        }
+        btn1.onclick = () => {
+            h1.innerText = (+inp.value) - (+inp1.value)
+        }
+        btn2.onclick = () => {
+            h1.innerText = (+inp.value) * (+inp1.value)
+        }
+        btn3.onclick = () => {
+            h1.innerText = (+inp.value) / (+inp1.value)
+        }
+        btn4.onclick = () => {
+            if (h3.innerText === '0' || h2.innerText === '0') {
+                h3.innerText = '0'
+                h2.innerText = '0'
+            } else {
+                h3.innerText--
+                h2.innerText= `${i = i - 100}$`
+            }
+        }
+        btn5.onclick = () => {
+            h3.innerText++
+            h2.innerText = `${i = i + 100}$`
+        }
+            // let a = prompt('Число 1');
+//         let b = prompt('+/-/*//');
+//         let c = prompt('Число 2');
+//         if (b === '+') {
+//             alert(a + c)
+//         } else if (b === '-') {
+//             alert(a - c)
+//         } else if (b === '*'){
+//             alert(a * c)
+//         }else if (b === '/'){
+//             alert(a / c)
+//         }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,423 @@
+// <!DOCTYPE html>
+// <html lang="en">
+
+// <head>
+//     <meta charset="UTF-8">
+//     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Типы данных
+//         1)string '2'
+//         2)number 2
+//         3)boolean false true - if else
+//         4)bigint,
+//         5)undifined,
+//         6)Null - пустой
+//         7)symbol,
+//         8)object[]
+//     </title>
+// </head>
+
+// <body>
+//     <script>
+//     {/* // let name = 'asan';
+// //         let age = 26
+// //         console.log(name,age);
+// //         let name = prompt('Как вас зовут?');
+// //         let age = prompt('Сколько вам лет?');
+// //         let Year = prompt('Какой сейчас год?');
+// //         let Country = prompt('Где вы находитесь?');
+// //         console.log('Вас зовут '  + name , 'Вы родились в ' + ( Year-age ) , 'Вы на данный момент находитесь в городе ' + Country);
+// //         let name = prompt ('Атын ким?');
+// //         let work = prompt ('Ким болуп иштейсин');
+// //         console.log(name + ' бизге ушул тармактагы '+ work + ' адис кк');
+// //         let name = +prompt('цифра');
+// //         let age = +prompt('Цифра');
+// //         console.log(`${name}${'*'}${age}${'='}${name*age}`);
+// //         let a = prompt('Кыргызстандын президенти ким?');
+// //         let b = 'Жапаров';
+// //         if (a == b) {
+//             console.log('Туура')
+//         } else {
+//             console.log('Туура эмес')
+//         // }
+//         let a = prompt('логин');
+//         let b = +prompt('пароль');
+//         if (a === 'Alym' && b === 1234) {
+//             console.log('Добро пожаловать!')
+//         } else {
+//             console.log('error')
+//         }
+        // let a = prompt('Сколько тебе лет?');
+        // if (a <= 6) {
+        //     console.log('Малыш')
+        // } else if (a <= 18) {
+        //     console.log('Ученик')
+        // } else if (a <= 25) {
+        //     console.log('Студент')
+        // } else if (a <= 45) {
+        //     console.log('Взрослый')
+        // } else if (a <= 75) {
+        //     console.log('Директор')
+        // } else if (a <= 100) {
+        //     console.log('Пенсионер')
+        // } else if (a <= 120) {
+        //     console.log('Умер')
+        // }
+        // let a = prompt('Назовите свое имя или цифру')
+        // if (a <= 1000000 && a!=='') {
+        //     alert(a * 2)
+        // } else if (a !== '')
+        //     alert(`Привет ${a}`)
+        // else {
+        //     alert('Напишите что-нибудь')
+        
+        // for (let i = 0; i < 3; i++) {
+        //     let a = prompt('password')
+        //     if (a === 'A') {
+        //         console.log('da')
+        //         i = 3
+        //     } else {
+        //         console.log('no')
+        //         alert(` incored  ${3 - i}`)
+        //     }
+        // }
+//         let i = 0;
+//         let admin = 'Asan'
+//         let password = 1234
+//         let c = 'Hasan'
+//         let d = 4321
+//         while (i < 3) {
+//             let a = prompt('login');
+//             let b = +prompt('password')
+//             if ((a === admin && b === password) || ( a === c && b === d)) {
+//                 console.log('da');
+//                 break;
+//             } else {
+//                 alert('error');
+//                 i++;
+//             }
+//         }
+//         let a = [
+//             { login: 'Asan', password: 1234 },
+//             { login: 'Uson', password: 12345 },
+//             { login: 'Dastan', password: 4321 },
+//             { login: 'Uson', password: 9876 },
+//         ]
+//         let i = 0;
+//         while (i < 3) {
+//             let b = prompt('login');
+//             let c = +prompt('password');
+//             if (b === a[a].login && c === a[a].password) {
+//                 alert(`welcome ${b}`)
+//                 break;
+//             } else {
+//                 alert('error')
+//             }
+//             i++;
+//         }
+        // let a = prompt('Число 1');
+        // let b = prompt('+/-/*//');
+        // let c = prompt('Число 2');
+        // if (b === '+') {
+        //     alert(a + c)
+        // } else if (b === '-') {
+        //     alert(a - c)
+        // } else if (b === '*'){
+        //     alert(a * c)
+        // }else if (b === '/'){
+        //     alert(a / c)
+        // }
+        // let a = +prompt('цифра');
+        // let b = prompt('Рубль,доллар,евро');
+        // if (b === 'рубль') {
+        //     alert(a / 1.20)
+        // }else if (b === 'доллар'){
+        //     alert(a / 84.8)
+        // }else if (b === 'евро'){
+        //     alert(a / 97)
+        // }
+        // let name = prompt('Как тебя зовут?')
+        // let a = +prompt(name + ' сколько тебе лет?');
+        // if (a >= 18) {
+        //     let b = confirm('Ты куришь?');
+        //     if (b === true) {
+        //       let c = +prompt('Как долго?');
+        //         if (c >= 3){
+        //             alert('Мне тебя жаль');
+        //         }else{
+        //             alert('Есть шанс бросить');
+        //         }
+        //     }else{
+        //         alert('добро пожаловать');
+        //     }
+        // } else {
+        //     alert(`Приходи через ${18-a} Год`);
+        // }
+        
+//         const cars = [
+//             {
+//                 model: 'Mersedes',
+//                 god: 2002,
+//                 color: ['red', 'black', 'blue', 'white'],
+//                 obem: 2,
+//                 sostoyania: 'B/U',
+//                 price: 3500,
+//                 media: [
+//                     { video: 'https://youtu.be/JBnR5EAariE' },
+//                     { img: 'https://avatars.mds.yandex.net/get-autoru-vos/5243767/90a5056b3b9a6a0c334bf804c9d05c7e/456x342n' },
+//                 ],
+//             },
+//             {
+//                 model: 'BMW',
+//                 god: 2004,
+//                 color: ['red', 'black', 'blue', 'white'],
+//                 obem: 4,
+//                 sostoyania: 'B/U',
+//                 price: 6000,
+//                 media: [
+//                     { video: 'https://www.youtube.com/watch?v=S50c5t1lCRg' },
+//                     { img: 'https://s.drom.ru/1/reviews/photos/bmw/5-series/big_71668_3.jpeg' },
+//                 ],
+//             },
+//             {
+//                 model: 'Toyota',
+//                 god: 2010,
+//                 color: ['red', 'black', 'blue', 'white'],
+//                 obem: 2,
+//                 sostoyania: 'B/U',
+//                 price: 11000,
+//                 media: [
+//                     { video: 'https://www.youtube.com/watch?v=9W2ssfn3sEI' },
+//                     { img: 'https://avatars.mds.yandex.net/get-verba/787013/2a000001609d717fcd037b415d00b0ee388c/cattouch' },
+//                 ],
+//             },
+//             {
+//                 model: 'Matiz',
+//                 god: 2008,
+//                 color: ['red', 'black', 'blue', 'white'],
+//                 obem: 0.8,
+//                 sostoyania: 'B/U',
+//                 price: 1800,
+//                 media: [
+//                     { video: 'https://www.youtube.com/watch?v=y4dHA2zmWxw' },
+//                     { img: 'https://s.drom.ru/4/reviews/photos/daewoo/matiz/77356_11.jpeg' },
+//                 ],
+//             }
+//         ]
+//         console.log(cars[2].color[2]);
+//         let things = [
+//             "internet",
+//             "laptop",
+//             'power',
+//             'office',
+//             'computer',
+//         ];
+//         for (let i = 0; i < things.length; i++) {
+//             console.log('I need ' + things[i])
+//         }
+//         let a = 0;
+//         let b = 1;
+//         for (let i = 0; i < 20; i++) {
+//             let c = a + b;
+//             a = b;
+//             b = c;
+//                 console.log(c)
+//         }
+//         const QUESTIONS = [
+//             {
+//                 question1: "КР Президенти ким?",
+//                 answer: "Жапаров",
+//                 score: 2,
+//             },
+//             {
+//                 question1: "1+3?",
+//                 answer: "4",
+//                 score: 1,
+//             },
+//             {
+//                 question1: "Озгон району кайсы областка карайт?",
+//                 answer: "Ош",
+//                 score: 4,
+//             },
+//         ];
+//         let total = 0;
+//         for (let i = 0; i < QUESTIONS.length; i++) {
+//             let a = prompt(QUESTIONS[i].question1);
+//             if (a === QUESTIONS[i].answer) {
+//                 total += QUESTIONS[i].score
+//             }
+//         }
+//         console.log(total)
+//         const a = [
+//             { age: 26, gender: 'male' },
+//             { age: 32, gender: 'female' },
+//             { age: 36, gender: 'male' },
+//             { age: 47, gender: 'male' },
+//             { age: 26, gender: 'female' },  
+//         ];
+//         let male = 0;
+//         let female = 0;
+//         let faleMax = 0;
+//         let maleMax = 0;
+//         for (i = 0; i < a.length; i++) {
+//             if (a[i].gender === 'male') {
+//                 male++
+//                 if (a[i].age > maleMax){
+//                     maleMax = a[i].age
+//                 }
+//             } else if(a[i].gender === 'female'){
+//                 female++
+//                 if(a[i].age > faleMax){
+//                     faleMax = a[i].age
+//                 }
+//             }
+//         }
+//         console.log(`кишилердин саны ${male}`)
+//         console.log(`аялдардын саны ${female}`)
+//         console.log(`эн чон кишинин жашы ${maleMax}`)
+//         console.log(`эн чон аялдын жашы ${faleMax}`)
+//         let clients = [
+//             {
+//                 login: 'Alym',
+//                 password: 1234,
+//                 cash: 1000000,
+//             },
+//             {
+//                 login: 'Uson',
+//                 password: 12345,
+//                 cash: 2000000,
+//             },
+//             {
+//                 login: 'Dastan',
+//                 password: 4321,
+//                 cash: 3000000,
+//             },
+//             {
+//                 login: 'Asan',
+//                 password: 9876,
+//                 cash: 4000000,
+//             },
+//         ]
+//         let login = prompt('login');
+//         let pin = +prompt('pin');
+//         let founds = false;
+//         function Jr(login,pin){
+//             for (let i = 0; i < clients.length; i++) {
+//             if (login === clients[i].login && pin === clients[i].password) {
+//                 alert('Ваш баланс ' + clients[i].cash);
+//                 founds = true;
+//                 if (founds === true) {
+//                     let Som = prompt('Канча акча чыгарасын?');
+//                     confirm(`Вы точно хотите снять ${Som}`);
+//                     alert(`У вас осталось ${clients[i].cash - Som}`);
+//                 }
+//                 }
+//             }
+//         }
+//         Jr(login,pin)
+//         let a = 'Asan'
+//         function name(login) {
+//             if (login === a) {
+//                 console.log(true)
+//             } else {
+//                 console.log(false)
+//             }
+//         }
+
+
+//         name(a)
+//         let arr = [9, 6, 5, 8, 7]
+//         let target = 15
+//         function name(arr, target) {
+//             for (let i = 0; i < arr.length; i++) {
+//                 for (let j = 0; j < arr.length; j++) {
+//                     if (arr[i] + arr[j] === target) {
+//                         console.log(`${i} ${j}`)
+
+//                     }
+//                 }
+//             }
+//         }
+//         name(arr,15 )
+
+
+        // let week = [
+        //     'Понедельник',
+        //     'Вторник',
+        //     'Среда',
+        //     'Четверг',
+        //     'Пятница',
+        //     'Суббота',
+        //     'Воскресенье'
+        // ];
+        // let a = +prompt('???');
+        // function name(a) {
+        //     for (let i = 0; i < week.length; i++) {
+        //         if (a === i + 1) {
+        //             alert(week[i]);
+        //             break;
+        //         } else if (a > week.length || a === 0) {
+        //             alert('error')
+        //             break;
+        //         }
+        //     }
+        // }
+        // name(a)
+
+
+//         let a = [2, 235, 95, 10, 15, 240, 35, 75, 55, 90];
+//         let b = 0;
+//         for (let i = 0; i < a.length; i++) {
+//             for (let j = 0; j < a.length; j++) {
+//                 if (a[j] - a[i] > b) {
+//                     b = a[j] - a[i];
+//                 }
+//             }
+//         }
+//         console.log(b);
+//         break;
+
+
+//         let i = 0
+//             let a = setInterval(function(){
+//                 console.log(i);
+//                 i++
+//                 if(i === 21){
+//                     clearInterval(a)
+//                 }
+//             },100)
+//             let timerId = setTimeout(() => console.log('End!'), 3000);
+//         let random  = Math.floor(Math.random() * 3);
+//         let a = +prompt('Угадай рандомное число')
+//         function func() {
+//             if (random === a){
+//                 alert('Ты угадал')
+//             }else{
+//                 alert('Не угадал')
+//             }
+//         }
+//         func()
+//         let name = [
+//             'Alym',
+//             'Dior',
+//             'Ernest',
+//             'David',
+//             'Chyngyz',
+//             'Ulan',
+//             'Shoxrux',
+//             'Nurislam',
+//             'Diner',
+//             'Erbol',
+//         ]
+//         let random = Math.floor(Math.random(name) * name.length - 1)
+//         console.log(name);
+//         function a() {
+//             for (let i = 0; i < name.length; i++) {
+//                 name.splice(random, )
+//                 alert(`${random} выиграл в сумме 1000000руб`)
+//             }
+//         }
+//         a()
+//          */}
+//     </script>
+// </body>

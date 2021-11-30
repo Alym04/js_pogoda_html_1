@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Сфетофор</title>
+    <style>
+        .block1,
+        .block2 {
+            margin-left: 10%;
+            margin-top: 3%;
+            display: inline-block;
+            padding: 50px;
+            border: 5px solid brown;
+        }
+
+        .block1 {
+            background-color: black;
+
+        }
+
+        .block2 {
+            background-color: black;
+
+
+        }
+
+        .inner {
+            background-color: red;
+            border: 3px solid white;
+        }
+
+        .inner1 {
+            background-color: yellow;
+        }
+
+        .inner2 {
+            background-color: green;
+            border: 3px solid white;
+        }
+
+        .inner,
+        .inner1,
+        .inner2 {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-top: 15px;
+        }
+
+        .inner1 {
+            text-align: center;
+            position: relative;
+        }
+
+        span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 80px;
+        }
+        #inner, #inner2 {
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block1">
+        <div id="inner" class="inner"></div>
+        <div class="inner1" id="inner1">
+            <span id="span"></span>
+        </div>
+        <div id="inner_2" class="inner2"></div>
+    </div>
+    <div class="block2">
+        <div id="inner_" class="inner"></div>
+        <div id="inner1" class="inner1">
+            <span id="span2"></span>
+        </div>
+        <div id="inner2" class="inner2"></div>
+    </div>
+    <script>
+        let span = document.getElementById('span')
+        let span2 = document.getElementById('span2')
+        let red = document.getElementById('inner')
+        let red1 = document.getElementById('inner_')
+        let green = document.getElementById('inner2')
+        let green1 = document.getElementById('inner_2')
+        let i = 15
+        let j = 0
+        setInterval(() => {
+            span.innerHTML = i
+            span2.innerHTML = i
+            if (i === 0) {
+                i = 15
+                if(j === 1){
+                    j = 2
+                } else {
+                    j = 1
+                }
+            } else {
+                i--
+            } 
+            if(j === 1){
+                red.style.backgroundColor = 'red';
+                green1.style.backgroundColor = 'gray';
+                red1.style.backgroundColor = 'gray';
+                green.style.backgroundColor ='green';
+            } else if (j === 2) {
+                red.style.backgroundColor = 'gray';
+                green1.style.backgroundColor = 'green';
+                red1.style.backgroundColor = 'red';
+                green.style.backgroundColor ='gray';
+            }
+
+        }, 1000);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .box {
+            width: 800px;
+            height: 500px;
+        }
+
+        .box img {
+            width: 100%;
+            height: 500px;
+        }
+
+        .block {
+            width: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .clock {
+            width: 100%;
+            height: 100px;
+        }
+
+        .clock img {
+            width: 100%;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img id="box" src="" alt="">
+    </div>
+    <div><button class='btn'>prev</button>
+        <button class='btn1'>next</button>
+    </div>
+    <div id="block" class="block">
+        <div onclick="toggle(0)" class="clock"><img
+                src="https://www.focus2move.com/wp-content/uploads/2020/01/Tesla-Roadster-2020-1024-03-696x522.jpg.webp"
+                alt=""></div>
+        <div onclick="toggle(1)" class="clock"><img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/2018_Toyota_Corolla_%28ZRE172R%29_Ascent_sedan_%282018-11-02%29_01.jpg/200px-2018_Toyota_Corolla_%28ZRE172R%29_Ascent_sedan_%282018-11-02%29_01.jpg"
+                alt=""></div>
+        <div onclick="toggle(2)" class="clock"><img
+                src="https://www.focus2move.com/wp-content/uploads/2021/02/Bugatti-Divo_Lady_Bug-2020-1024-0b-696x522.jpg"
+                alt=""></div>
+        <div onclick="toggle(3)" class="clock"><img
+                src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Lamborghini/Urus/4418/Lamborghini-Urus-V8/1621927166506/front-left-side-47.jpg?tr=w-456"
+                alt=""></div>
+    </div>
+    <script>
+        let body = document.body
+        let img = document.getElementById('img')
+        let box = document.getElementById('box')
+        let btn = document.getElementsByTagName('button')[0]
+        let btn1 = document.getElementsByTagName('button')[1]
+        let imgs = ["https://www.focus2move.com/wp-content/uploads/2020/01/Tesla-Roadster-2020-1024-03-696x522.jpg.webp", "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/2018_Toyota_Corolla_%28ZRE172R%29_Ascent_sedan_%282018-11-02%29_01.jpg/200px-2018_Toyota_Corolla_%28ZRE172R%29_Ascent_sedan_%282018-11-02%29_01.jpg", "https://www.focus2move.com/wp-content/uploads/2021/02/Bugatti-Divo_Lady_Bug-2020-1024-0b-696x522.jpg", "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lamborghini/Urus/4418/Lamborghini-Urus-V8/1621927166506/front-left-side-47.jpg?tr=w-456"]
+        let clock = document.getElementsByClassName('clock')
+        let i = 0
+        box.src = imgs[0];
+        btn1.onclick = () => {
+            if (i === 3) {
+                i = 0
+            } else {
+                i++
+            }
+            box.src = imgs[i]
+        }
+        btn.onclick = () => {
+            if (i === 0) {
+                i = 0
+            } else {
+                i--
+            }
+            box.src = imgs[i]
+        }
+        const toggle = (index) => {
+            console.log(index);
+            box.src = imgs[index]
+        }
+        body.onkeydown = (a) => {
+            if (a.keyCode === 39) {
+                if (i === 3) {
+                    i = 0
+                } else {
+                    i++
+                }
+                box.src = imgs[i]
+            } else if (a.keyCode === 37) {
+                if (i === 0) {
+                    i = 0
+                } else {
+                    i--
+                }
+                box.src = imgs[i]
+            }
+        }
+    </script>
+</body>
+
+</html>

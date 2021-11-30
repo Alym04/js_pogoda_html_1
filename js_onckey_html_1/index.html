@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* body{
+            background-color: greenyellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        } */
+        .box {
+            width: 500px;
+            height: 500px;
+            background: rgb(103, 136, 103);
+            box-shadow: 0 0 15px 5px gold;
+            position: relative;
+        }
+
+        .block {
+            width: 100px;
+            height: 100px;
+            background: rgb(177, 153, 153);
+            position: absolute;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <div id="sm" class="block"></div>
+    </div>
+
+
+    <script>
+        //    let h1 = document.getElementsByTagName('h1')[1]
+        //     let h2 = document.getElementsByTagName('h1')[2]
+        //     let body = document.body
+        //     body.onkeydown = (e) => {
+        //         if (e.keyCode === 48 || e.keyCode === 49 || e.keyCode === 50 || e.keyCode === 51 || e.keyCode === 52 || e.keyCode === 53 || e.keyCode === 54 || e.keyCode === 55 || e.keyCode === 56 || e.keyCode === 57) {
+        //             h1.innerText = +h1.innerText + +e.key
+        //             h2.innerText += e.key
+        //     }
+        // }
+        let block = document.getElementById('sm');
+        let body = document.body
+        let y = 0;
+        let x = 0;
+        // let ArrowLeft = 37
+        // let ArrowUp = 38
+        // let ArrowRight = 39
+        // let ArrowDown = 40
+        body.onkeydown = (a) => {
+            if (a.keyCode === 39) {
+                block.style.left = x + 'px'
+                x += 5
+            } else if (a.keyCode === 37) {
+                block.style.left = x + 'px'
+                x -= 5
+            } else if (a.keyCode === 40) {
+                block.style.top = x + 'px'
+                y += 5
+            } else if (a.keyCode === 38) {
+                block.style.top = x + 'px'
+                y -= 5
+            }
+        }
+    </script>
+</body>
+
+</html>
